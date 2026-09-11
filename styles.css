@@ -1,320 +1,39 @@
-/* ERVIN RUSTEMAGIĆ MEMORIAL — V2
-   No framework, no JavaScript, no external font files.
-   Photo fades are created with CSS masks + layered gradients. */
-
-:root{
-  --paper:#f8f5ee;
-  --paper-2:#fbf9f4;
-  --ink:#161616;
-  --muted:#6f685e;
-  --gold:#ad8334;
-  --gold-soft:#c7a35d;
-  --rule:#ded3c0;
-  --max:1500px;
+:root { --paper: #fbf9f4; }
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--paper);
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:Georgia,"Times New Roman",serif;
-  text-rendering:optimizeLegibility;
+body {
+  display: flex;
+  justify-content: center;
 }
-img{max-width:100%}
-a{color:inherit}
-.site-header{
-  height:74px;
-  max-width:var(--max);
-  margin:auto;
-  padding:0 62px;
-  display:flex;
-  align-items:center;
-  gap:26px;
-  border-bottom:1px solid rgba(173,131,52,.12);
-  background:rgba(248,245,238,.97);
+.page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: var(--paper);
 }
-.brand{
-  display:flex;
-  align-items:center;
-  gap:15px;
-  text-decoration:none;
-  white-space:nowrap;
-  font-size:18px;
+.poster {
+  display: block;
+  width: min(100%, 1055px);
+  height: auto;
+  object-fit: contain;
 }
-.brand img{width:79px;height:auto;display:block}
-.header-rule{height:1px;background:var(--gold);opacity:.6;flex:1;max-width:320px}
-nav{display:flex;gap:34px;margin-left:auto}
-nav a{
-  font-size:11px;
-  letter-spacing:.28em;
-  text-transform:uppercase;
-  text-decoration:none;
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
-nav a:hover{color:var(--gold)}
-.header-tail{width:50px;height:1px;background:var(--gold);opacity:.7;margin-left:6px}
-
-main{max-width:var(--max);margin:auto;overflow:hidden;background:var(--paper-2)}
-.hero{
-  min-height:665px;
-  display:grid;
-  grid-template-columns:44% 56%;
-  border-bottom:1px solid var(--rule);
-  background:var(--paper-2);
-}
-.hero-copy{
-  position:relative;
-  z-index:4;
-  padding:70px 34px 42px 64px;
-}
-.eyebrow{
-  font-size:15px;
-  letter-spacing:.36em;
-  text-transform:uppercase;
-  margin-bottom:18px;
-}
-.gold-rule{width:78px;height:2px;background:var(--gold);margin-bottom:26px}
-h1{
-  margin:0;
-  font-weight:500;
-  font-size:clamp(64px,7.5vw,116px);
-  line-height:.78;
-  letter-spacing:-.055em;
-}
-.dates{
-  margin-top:28px;
-  font-size:29px;
-  letter-spacing:.17em;
-}
-.role{
-  margin:18px 0 0;
-  font-size:20px;
-  line-height:1.45;
-}
-.short-rule{width:75px;height:2px;background:var(--gold);margin:26px 0}
-
-.quote-card{margin:0;max-width:520px}
-.quote-card blockquote{
-  margin:0;
-  padding:0 14px 0 45px;
-  position:relative;
-  font-size:clamp(27px,2.65vw,41px);
-  line-height:1.33;
-  font-style:italic;
-}
-.quote-card blockquote::before,
-.quote-card blockquote::after{
-  position:absolute;
-  color:var(--gold-soft);
-  font-style:normal;
-  font-weight:700;
-  font-size:1.35em;
-  line-height:1;
-}
-.quote-card blockquote::before{content:"“";left:0;top:.04em}
-.quote-card blockquote::after{content:"”";right:0;bottom:-.06em}
-.quote-card figcaption{
-  margin:30px 0 0 45px;
-  font-size:15px;
-  font-style:italic;
-  color:#4c4842;
-}
-
-.hero-photo-wrap{
-  position:relative;
-  min-height:665px;
-  background:var(--paper-2);
-  overflow:hidden;
-}
-.hero-photo-wrap::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:2;
-  pointer-events:none;
-  background:
-    linear-gradient(90deg,var(--paper-2) 0%,rgba(251,249,244,.82) 6%,rgba(251,249,244,.25) 18%,transparent 34%),
-    linear-gradient(180deg,var(--paper-2) 0%,transparent 7%,transparent 88%,rgba(251,249,244,.96) 100%);
-}
-.hero-photo-wrap::after{
-  content:"";
-  position:absolute;
-  inset:-8%;
-  z-index:0;
-  background:url("assets/ervin-hero.jpg") center/cover no-repeat;
-  filter:blur(18px) grayscale(1);
-  opacity:.18;
-  transform:scale(1.04);
-}
-.hero-photo{
-  position:absolute;
-  inset:0;
-  z-index:1;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:52% 50%;
-  filter:grayscale(1) contrast(1.04);
-  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.5) 7%,#000 19%,#000 100%);
-          mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.5) 7%,#000 19%,#000 100%);
-}
-.side-words{
-  position:absolute;
-  z-index:3;
-  right:45px;
-  top:56px;
-  display:grid;
-  gap:10px;
-  text-align:center;
-  text-transform:uppercase;
-  letter-spacing:.22em;
-  color:#82652b;
-  font-size:11px;
-  line-height:1.2;
-}
-.side-words::after{
-  content:"";
-  width:47px;height:1px;background:var(--gold);
-  margin:8px auto 0;
-}
-
-.story-section{
-  display:grid;
-  grid-template-columns:54% 46%;
-  gap:44px;
-  padding:36px 58px 34px;
-  border-bottom:1px solid var(--rule);
-}
-.archive-card{margin:0}
-.archive-mask{
-  position:relative;
-  overflow:hidden;
-  background:#eae6dd;
-  border:1px solid rgba(173,131,52,.44);
-}
-.archive-mask::after{
-  content:"";
-  position:absolute;inset:0;
-  box-shadow:inset 0 0 32px 18px rgba(248,245,238,.32);
-  pointer-events:none;
-}
-.archive-mask img{
-  display:block;width:100%;
-  filter:grayscale(1) contrast(1.05);
-}
-.archive-card figcaption{
-  display:flex;align-items:center;gap:22px;
-  margin-top:17px;
-  color:#7d622a;
-  text-transform:uppercase;
-  letter-spacing:.34em;
-  justify-content:center;
-  font-size:11px;
-}
-.archive-card figcaption span{height:1px;background:var(--gold);flex:1;max-width:63px}
-
-.story-copy{position:relative;padding:10px 14px 0 4px;min-height:390px}
-.section-kicker{
-  margin:0;
-  color:#9a762d;
-  text-transform:uppercase;
-  letter-spacing:.25em;
-  font-size:13px;
-}
-.tiny-rule{display:block;width:55px;height:2px;background:var(--gold);margin:20px 0 25px}
-.story-copy p{
-  max-width:430px;
-  font-size:22px;
-  line-height:1.38;
-  margin:0 0 26px;
-}
-.story-lead{font-size:25px!important}
-.pen-line{
-  position:absolute;
-  right:-35px;
-  bottom:2px;
-  width:83%;
-  max-width:430px;
-}
-.micro-words{
-  position:absolute;
-  right:0;
-  bottom:6px;
-  display:grid;
-  gap:9px;
-  color:#9d7c38;
-  text-align:center;
-  text-transform:uppercase;
-  letter-spacing:.25em;
-  font-size:10px;
-}
-
-.remember{
-  position:relative;
-  text-align:center;
-  padding:32px 48px 18px;
-  min-height:270px;
-  overflow:hidden;
-}
-.remember-label,
-.footer-motto{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:18px;
-  text-transform:uppercase;
-  letter-spacing:.27em;
-  color:#98752f;
-  font-size:11px;
-}
-.remember-label span,.footer-motto span{height:1px;width:58px;background:var(--gold)}
-.remember>p:not(.closing){
-  max-width:860px;
-  margin:20px auto 0;
-  font-size:18px;
-  line-height:1.45;
-}
-.closing-rule{width:56px;height:2px;background:var(--gold);margin:18px auto 12px}
-.closing{font-size:19px;font-style:italic;margin:0}
-.mountains{
-  height:78px;
-  margin:12px -48px -1px;
-  background:url("assets/mountain-line.svg") center bottom/cover no-repeat;
-}
-.footer-motto{margin-top:-7px;font-size:9px}
-
-@media (max-width:1000px){
-  .site-header{padding:0 28px}
-  nav{gap:18px}
-  .hero{grid-template-columns:1fr}
-  .hero-copy{padding:52px 32px 44px}
-  .hero-photo-wrap{min-height:600px;order:-1}
-  .hero-photo{
-    -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 76%,transparent 100%);
-            mask-image:linear-gradient(180deg,#000 0%,#000 76%,transparent 100%);
-  }
-  .hero-photo-wrap::before{
-    background:linear-gradient(180deg,transparent 0%,transparent 75%,var(--paper-2) 100%);
-  }
-  .side-words{right:25px;top:35px}
-  .story-section{grid-template-columns:1fr;padding:34px 32px 38px}
-  .story-copy{min-height:330px}
-}
-@media (max-width:700px){
-  .site-header{height:64px;padding:0 18px}
-  .brand span,.header-rule,.header-tail,nav{display:none}
-  .brand img{width:72px}
-  .hero-photo-wrap{min-height:440px}
-  .side-words{display:none}
-  .hero-copy{padding:38px 21px 36px}
-  h1{font-size:66px}
-  .dates{font-size:23px}
-  .role{font-size:17px}
-  .quote-card blockquote{font-size:30px}
-  .story-section{padding:28px 20px 34px;gap:30px}
-  .story-copy p{font-size:19px}
-  .story-lead{font-size:22px!important}
-  .pen-line,.micro-words{display:none}
-  .remember{padding:28px 20px 16px}
-  .remember>p:not(.closing){font-size:16px}
+@media (min-width: 1056px) {
+  body { padding: 24px 0; }
+  .poster { box-shadow: 0 10px 40px rgba(0,0,0,.045); }
 }
