@@ -1,180 +1,276 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#fbf9f4">
-  <title>Ervin Rustemagić — In Memoriam</title>
-  <meta name="description" content="In memoriam Ervin Rustemagić, 1952–2025.">
-  <style>
-    :root{
-      --paper:#fbf9f4;
-      --ink:#111;
-      --gold:#b2883d;
-      --text:#283556;
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
-    body{
-      font-family:Didot,"Bodoni 72","Bodoni MT","Times New Roman",Georgia,serif;
-      text-rendering:optimizeLegibility;
-      -webkit-font-smoothing:antialiased;
-    }
-    .page{
-      width:min(100%,1055px);
-      margin:0 auto;
-      padding:20px 26px 36px;
-      text-align:center;
-      overflow:hidden;
-    }
-    .kicker{
-      margin:0;
-      font-size:14px;
-      letter-spacing:.42em;
-      text-transform:uppercase;
-      color:#222;
-    }
-    .rule{
-      width:50px;
-      height:2px;
-      margin:16px auto 21px;
-      background:var(--gold);
-    }
-    h1{
-      margin:0;
-      font-size:clamp(58px,8.8vw,102px);
-      line-height:.94;
-      font-weight:400;
-      letter-spacing:-.048em;
-    }
-    .dates{
-      margin:10px 0 6px;
-      font-size:29px;
-      letter-spacing:.22em;
-    }
-    .portrait-wrap{
-      width:min(700px,95vw);
-      margin:0 auto 10px;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      min-height:530px;
-    }
-    .portrait{
-      width:min(620px,100%);
-      height:auto;
-      display:block;
-      filter:drop-shadow(0 10px 24px rgba(0,0,0,.03));
-    }
-    .quote{
-      width:min(820px,95%);
-      margin:0 auto 22px;
-    }
-    blockquote{
-      position:relative;
-      margin:0;
-      padding:0 52px;
-      font-size:clamp(31px,4.2vw,46px);
-      line-height:1.28;
-      font-style:italic;
-      font-weight:400;
-    }
-    blockquote::before,
-    blockquote::after{
-      position:absolute;
-      color:var(--gold);
-      font-style:normal;
-      font-size:1.45em;
-      line-height:1;
-      font-weight:700;
-    }
-    blockquote::before{content:"“";left:2px;top:-.03em}
-    blockquote::after{content:"”";right:2px;bottom:-.10em}
-    .attribution{
-      margin:16px 0 0;
-      font-size:18px;
-      font-style:italic;
-      color:#28231d;
-    }
-    .archive-wrap{
-      width:min(560px,84%);
-      margin:6px auto 10px;
-      display:flex;
-      justify-content:center;
-    }
-    .archive{
-      width:100%;
-      height:auto;
-      display:block;
-      filter:drop-shadow(0 8px 18px rgba(0,0,0,.02));
-    }
-    .family-rule{
-      width:50px;
-      height:2px;
-      margin:8px auto 14px;
-      background:var(--gold);
-    }
-    .family{
-      width:min(860px,96%);
-      margin:0 auto;
-      font-size:18px;
-      line-height:1.45;
-      color:var(--text);
-    }
-    .logo-rule{
-      width:50px;
-      height:2px;
-      margin:18px auto 14px;
-      background:var(--gold);
-    }
-    .logo{
-      width:118px;
-      height:auto;
-      display:block;
-      margin:0 auto;
-    }
-    @media (max-width:700px){
-      .page{padding:16px 12px 28px}
-      .kicker{font-size:11px}
-      .rule{margin:13px auto 17px}
-      h1{font-size:54px}
-      .dates{font-size:21px}
-      .portrait-wrap{min-height:auto;margin-bottom:10px}
-      .portrait{width:min(500px,100%)}
-      blockquote{font-size:29px;padding:0 32px}
-      .attribution{font-size:16px}
-      .archive-wrap{width:94%}
-      .family{font-size:15px}
-      .logo{width:108px}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fbf9f4">
+<title>Ervin Rustemagić — In Memoriam</title>
+<meta name="description" content="In memoriam Ervin Rustemagić, 1952–2025.">
+
+<style>
+:root{
+  --paper:#fbf9f4;
+  --ink:#111111;
+  --gold:#b1883d;
+  --family:#243653;
+}
+
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100%;
+  background:var(--paper);
+  color:var(--ink);
+}
+
+body{
+  font-family:Didot,"Bodoni 72","Bodoni MT","Times New Roman",Georgia,serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+.page{
+  width:min(100%,1055px);
+  margin:0 auto;
+  padding:24px 30px 34px;
+  text-align:center;
+  overflow:hidden;
+}
+
+.kicker{
+  margin:0;
+  font-size:14px;
+  font-weight:400;
+  letter-spacing:.42em;
+  text-transform:uppercase;
+}
+
+.rule{
+  width:50px;
+  height:2px;
+  margin:16px auto 22px;
+  background:var(--gold);
+}
+
+h1{
+  margin:0;
+  font-size:clamp(62px,8.8vw,100px);
+  line-height:.94;
+  font-weight:400;
+  letter-spacing:-.047em;
+}
+
+.dates{
+  margin:12px 0 20px;
+  font-size:28px;
+  line-height:1;
+  letter-spacing:.21em;
+}
+
+/* Only the second/original archival photograph is used.
+   Edge treatment is intentionally VERY light: a narrow paper-colored veil,
+   not a blur and not an AI edit. */
+.hero-photo{
+  position:relative;
+  width:min(770px,92%);
+  margin:0 auto 30px;
+  overflow:hidden;
+}
+
+.hero-photo img{
+  display:block;
+  width:100%;
+  height:auto;
+  filter:grayscale(1) contrast(1.02);
+}
+
+.hero-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,
+      var(--paper) 0%,
+      rgba(251,249,244,.42) 1.5%,
+      transparent 4.5%,
+      transparent 95.5%,
+      rgba(251,249,244,.42) 98.5%,
+      var(--paper) 100%),
+    linear-gradient(180deg,
+      var(--paper) 0%,
+      rgba(251,249,244,.28) 1.5%,
+      transparent 4%,
+      transparent 96%,
+      rgba(251,249,244,.28) 98.5%,
+      var(--paper) 100%);
+}
+
+.quote{
+  width:min(800px,95%);
+  margin:0 auto 26px;
+}
+
+blockquote{
+  position:relative;
+  margin:0;
+  padding:0 48px;
+  font-size:clamp(30px,4vw,44px);
+  line-height:1.27;
+  font-style:italic;
+  font-weight:400;
+}
+
+blockquote::before,
+blockquote::after{
+  position:absolute;
+  color:var(--gold);
+  font-style:normal;
+  font-size:1.38em;
+  line-height:1;
+  font-weight:700;
+}
+
+blockquote::before{
+  content:"“";
+  left:0;
+  top:-.02em;
+}
+
+blockquote::after{
+  content:"”";
+  right:0;
+  bottom:-.11em;
+}
+
+.attribution{
+  margin:16px 0 0;
+  font-size:17px;
+  line-height:1.2;
+  font-style:italic;
+}
+
+.family-divider{
+  width:50px;
+  height:2px;
+  margin:28px auto 15px;
+  background:var(--gold);
+}
+
+.family{
+  width:min(850px,96%);
+  margin:0 auto;
+  color:var(--family);
+  font-size:18px;
+  line-height:1.4;
+}
+
+.logo-divider{
+  width:50px;
+  height:2px;
+  margin:22px auto 16px;
+  background:var(--gold);
+}
+
+.saf{
+  display:block;
+  width:118px;
+  height:auto;
+  margin:0 auto;
+  mix-blend-mode:multiply;
+}
+
+@media(max-width:700px){
+  .page{
+    padding:18px 14px 28px;
+  }
+
+  .kicker{
+    font-size:11px;
+  }
+
+  .rule{
+    margin:13px auto 17px;
+  }
+
+  h1{
+    font-size:54px;
+    line-height:.96;
+  }
+
+  .dates{
+    font-size:21px;
+    margin:9px 0 16px;
+  }
+
+  .hero-photo{
+    width:96%;
+    margin-bottom:24px;
+  }
+
+  blockquote{
+    padding:0 31px;
+    font-size:28px;
+  }
+
+  .attribution{
+    font-size:15px;
+  }
+
+  .family-divider{
+    margin-top:24px;
+  }
+
+  .family{
+    font-size:15px;
+  }
+
+  .logo-divider{
+    margin-top:19px;
+  }
+
+  .saf{
+    width:108px;
+  }
+}
+
+@media(min-width:1100px){
+  body{padding:18px 0}
+}
+</style>
 </head>
+
 <body>
-  <main class="page">
-    <p class="kicker">In Memoriam</p>
-    <div class="rule" aria-hidden="true"></div>
+<main class="page">
+  <p class="kicker">In Memoriam</p>
+  <div class="rule" aria-hidden="true"></div>
 
-    <h1>Ervin Rustemagić</h1>
-    <p class="dates">1952 — 2025</p>
+  <h1>Ervin Rustemagić</h1>
+  <p class="dates">1952 — 2025</p>
 
-    <div class="portrait-wrap">
-      <img class="portrait" src="assets/ervin-portrait-soft.png" alt="Ervin Rustemagić smiling">
-    </div>
+  <figure class="hero-photo">
+    <img src="assets/ervin-archive-original.jpg"
+         alt="Ervin Rustemagić at a comics gathering">
+  </figure>
 
-    <section class="quote">
-      <blockquote>His magic lasted until the very end — and for a man, that is no small thing.</blockquote>
-      <p class="attribution">Miljenko Jergović</p>
-    </section>
+  <section class="quote">
+    <blockquote>His magic lasted until the very end — and for a man, that is no small thing.</blockquote>
+    <p class="attribution">Miljenko Jergović</p>
+  </section>
 
-    <div class="archive-wrap">
-      <img class="archive" src="assets/ervin-archive-soft.png" alt="Ervin Rustemagić at a comics gathering">
-    </div>
+  <div class="family-divider" aria-hidden="true"></div>
 
-    <div class="family-rule" aria-hidden="true"></div>
-    <p class="family">Forever loved by Edina, Maja, Edvin, Alem, Lejla, Benjamin, and Timur.</p>
+  <p class="family">
+    Forever loved by Edina, Maja, Edvin, Alem, Lejla, Benjamin, and Timur.
+  </p>
 
-    <div class="logo-rule" aria-hidden="true"></div>
-    <img class="logo" src="assets/SAFlogo-transparent.png" alt="SAF — Strip Art Features">
-  </main>
+  <div class="logo-divider" aria-hidden="true"></div>
+
+  <img class="saf"
+       src="assets/SAFlogo-original.jpg"
+       alt="SAF — Strip Art Features">
+</main>
 </body>
 </html>
