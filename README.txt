@@ -1,21 +1,36 @@
-ERVIN RUSTEMAGIĆ MEMORIAL — AUTHENTIC ASSETS EDITION
+ERVIN RUSTEMAGIĆ MEMORIAL — V2
 
-IMPORTANT
-This package contains NO AI-generated portrait and NO recreated SAF logo.
+FILES
+  index.html
+  styles.css
+  assets/
+    ervin-hero.jpg
+    ervin-archive.jpg
+    saf-logo.png
+    favicon.png
+    pen-line.svg
+    mountain-line.svg
+  preview-reference.png
 
-The site uses:
-- assets/ervin-original.jpg — the exact original family photograph supplied by you
-- assets/ervin-archive.jpg — the exact archival photograph supplied by you
-- assets/SAFlogo.jpg — the exact original SAF / Strip Art Features logo supplied by you
+HOW TO PREVIEW
+  Open index.html in a modern browser.
 
-The browser only crops/fades the photo edges with CSS for layout. It does not
-generate, redraw, retouch, or alter Ervin's face.
+HOW TO PUBLISH
+  Upload the contents of this folder to any static host (GitHub Pages,
+  Cloudflare Pages, Netlify, etc.). index.html must remain at the root.
 
-GITHUB
-Upload:
-- index.html
-- assets/ervin-original.jpg
-- assets/ervin-archive.jpg
-- assets/SAFlogo.jpg
+QUOTE
+  The quote currently in index.html is the sample line shown in the visual
+  mockup. Search for "SAMPLE QUOTE" and replace only the blockquote text
+  when your final approved wording is ready.
 
-The CSS is embedded in index.html, so there is no styles.css dependency.
+PHOTO EFFECTS
+  The faded/blurred edges are not baked into the images. They are implemented
+  in styles.css with CSS masks, gradient overlays and a blurred duplicate layer.
+
+FONTS
+  No font files or external font services are required. The page uses
+  Georgia / Times-style system serif fonts for durability.
+
+DOMAIN
+  DNS/domain setup is separate from these files.
