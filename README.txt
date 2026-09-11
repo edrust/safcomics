@@ -1,10 +1,18 @@
-ERVIN RUSTEMAGIĆ MEMORIAL — FINAL SEO PACKAGE
+ERVIN RUSTEMAGIĆ MEMORIAL — DOMAIN-READY PACKAGE
 
-The visual design is unchanged.
+Target domain:
+https://safcomics.com/
 
-SEO/social description:
-"In memory of Ervin Rustemagić (1952–2025), founder of Strip Art Features and a lifelong advocate for the Ninth Art."
+This package preserves the approved design and adds:
+- canonical URL for safcomics.com
+- absolute Open Graph/Twitter image URL
+- 48x48 SAF favicon for search-engine/browser compatibility
+- CNAME file for GitHub Pages custom-domain publishing
+- all prior favicon and social metadata
 
-This package also preserves the original SAF favicon setup.
+IMPORTANT:
+In GitHub > repository Settings > Pages, set Custom domain to:
+safcomics.com
 
-Upload index.html and the complete assets folder to the repository root.
+At your authoritative DNS provider, point the apex and www records to GitHub Pages.
+Do not point nameservers to GitHub; GitHub Pages does not provide DNS nameservers.
