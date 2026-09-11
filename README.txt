@@ -1,11 +1,18 @@
-ERVIN RUSTEMAGIĆ — MINIMAL ARCHIVE-HERO VERSION V4
+ERVIN RUSTEMAGIĆ — MINIMAL ARCHIVE-HERO VERSION V5
 
-Changes in this version:
-- kept the current photo size/proportions
-- moved the gold quotation marks close to the quote text
-- made the quotation marks smaller
-- added a touch more breathing room around the family line
-- preserved the gold separator lines and overall minimal layout
+Final polish:
+- one clean serif font stack across the whole page
+- quote marks moved in close to the quote text
+- family line color softened to a charcoal-navy
+- extra breathing room added around the lower section
+- gold separator lines preserved
+- same photo size and overall proportions
+
+Recommended design system:
+- Fonts: 1 family stack only
+- Colors: black/charcoal body text + gold accent + slightly cooler charcoal for family line
+- Hierarchy:
+  name > photo > quote > attribution > family line > SAF logo
 
 Upload index.html and the assets folder to the repository root.
 CSS is embedded directly in index.html.
