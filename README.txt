@@ -1,12 +1,12 @@
-ERVIN RUSTEMAGIĆ — MINIMAL ARCHIVE-HERO VERSION V2
+ERVIN RUSTEMAGIĆ — MINIMAL ARCHIVE-HERO VERSION V3
 
-Refinements in this version:
-- Name reduced to better balance the photo.
-- Quote reduced slightly for calmer hierarchy.
-- Family line enlarged so it reads as part of the memorial, not a footer.
-- SAF logo reduced slightly.
-- Edge fade around the photo lightened.
-- Separator lines preserved in the same places.
+Proportion refinements in this version:
+- name reduced again
+- main photo reduced noticeably to create more white space
+- quote block narrowed and text reduced slightly
+- family line enlarged slightly
+- SAF logo reduced slightly
+- separator lines preserved in the same positions
 
-Upload index.html and the assets folder to your GitHub repository root.
-CSS is embedded in index.html.
+Upload index.html and the assets folder to the repository root.
+CSS is embedded directly in index.html.
