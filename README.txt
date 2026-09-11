@@ -1,15 +1,21 @@
-ERVIN RUSTEMAGIĆ MEMORIAL — FINAL PACKAGE
+ERVIN RUSTEMAGIĆ MEMORIAL — AUTHENTIC ASSETS EDITION
 
-This package uses the approved memorial poster directly as the webpage visual.
+IMPORTANT
+This package contains NO AI-generated portrait and NO recreated SAF logo.
 
-FILES
-  index.html
-  styles.css
-  assets/
-    memorial-poster.png
-    social-preview.jpg
-    favicon.png
+The site uses:
+- assets/ervin-original.jpg — the exact original family photograph supplied by you
+- assets/ervin-archive.jpg — the exact archival photograph supplied by you
+- assets/SAFlogo.jpg — the exact original SAF / Strip Art Features logo supplied by you
 
-DEPLOY
-  Upload index.html, styles.css, and the assets folder to the root of your
-  GitHub repository, replacing the older version if desired.
+The browser only crops/fades the photo edges with CSS for layout. It does not
+generate, redraw, retouch, or alter Ervin's face.
+
+GITHUB
+Upload:
+- index.html
+- assets/ervin-original.jpg
+- assets/ervin-archive.jpg
+- assets/SAFlogo.jpg
+
+The CSS is embedded in index.html, so there is no styles.css dependency.

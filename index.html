@@ -3,110 +3,216 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#fbf9f4">
-
+  <meta name="theme-color" content="#faf8f2">
   <title>Ervin Rustemagić — In Memoriam</title>
   <meta name="description" content="In memoriam Ervin Rustemagić, 1952–2025.">
-  <meta name="robots" content="index,follow">
-
-  <meta property="og:title" content="Ervin Rustemagić — In Memoriam">
-  <meta property="og:description" content="A memorial to Ervin Rustemagić.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/social-preview-v2.jpg">
-
-  <link rel="icon" href="assets/favicon-v2.png">
-
   <style>
-    :root {
-      --paper: #fbf9f4;
+    :root{
+      --paper:#faf8f2;
+      --ink:#121212;
+      --muted:#5c5750;
+      --gold:#b0873d;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--paper);color:var(--ink)}
+    body{
+      font-family:Didot,"Bodoni 72","Bodoni MT",Georgia,"Times New Roman",serif;
+      text-rendering:optimizeLegibility;
+    }
+    .page{
+      width:min(100%,1055px);
+      margin:0 auto;
+      padding:22px 36px 34px;
+      text-align:center;
+      overflow:hidden;
+    }
+    .eyebrow{
+      margin:0;
+      font-size:15px;
+      letter-spacing:.42em;
+      text-transform:uppercase;
+    }
+    .gold-rule{
+      width:50px;
+      height:2px;
+      margin:17px auto 22px;
+      background:var(--gold);
+    }
+    h1{
+      margin:0;
+      font-size:clamp(58px,8.6vw,100px);
+      line-height:.95;
+      font-weight:500;
+      letter-spacing:-.045em;
+    }
+    .dates{
+      margin:10px 0 18px;
+      font-size:29px;
+      letter-spacing:.19em;
     }
 
-    * {
-      box-sizing: border-box;
+    /* REAL SOURCE PHOTO:
+       exact original JPEG; only browser cropping + edge fade. */
+    .portrait{
+      position:relative;
+      width:min(620px,87vw);
+      aspect-ratio:.96;
+      margin:0 auto 18px;
+      overflow:hidden;
+    }
+    .portrait img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:100% 48%;
+      filter:grayscale(1);
+      display:block;
+    }
+    .portrait::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:2;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg,var(--paper) 0%,rgba(250,248,242,.20) 12%,transparent 28%),
+        linear-gradient(180deg,var(--paper) 0%,transparent 8%,transparent 79%,var(--paper) 100%);
+    }
+    .portrait::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      z-index:3;
+      pointer-events:none;
+      box-shadow:inset 0 0 42px 24px rgba(250,248,242,.32);
     }
 
-    html {
-      background: var(--paper);
-      -webkit-text-size-adjust: 100%;
+    .quote{
+      width:min(760px,94%);
+      margin:2px auto 28px;
+    }
+    blockquote{
+      position:relative;
+      margin:0;
+      padding:0 44px;
+      font-size:clamp(30px,4vw,44px);
+      line-height:1.25;
+      font-style:italic;
+      font-weight:400;
+    }
+    blockquote::before,
+    blockquote::after{
+      position:absolute;
+      color:var(--gold);
+      font-style:normal;
+      font-size:1.35em;
+      font-weight:700;
+      line-height:1;
+    }
+    blockquote::before{content:"“";left:2px;top:-.05em}
+    blockquote::after{content:"”";right:2px;bottom:-.10em}
+    .attribution{
+      margin:18px 0 0;
+      font-size:18px;
+      font-style:italic;
     }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-      width: 100%;
-      background: var(--paper);
+    /* Exact archival source photo, only displayed in grayscale with edge fade. */
+    .archive{
+      position:relative;
+      width:min(520px,82%);
+      margin:8px auto 20px;
+      overflow:hidden;
+    }
+    .archive img{
+      display:block;
+      width:100%;
+      height:auto;
+      filter:grayscale(1);
+    }
+    .archive::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg,var(--paper) 0%,transparent 12%,transparent 88%,var(--paper) 100%),
+        linear-gradient(180deg,var(--paper) 0%,transparent 12%,transparent 86%,var(--paper) 100%);
     }
 
-    body {
-      overflow-x: hidden;
+    .family-rule{
+      width:50px;
+      height:2px;
+      margin:8px auto 14px;
+      background:var(--gold);
+    }
+    .family{
+      width:min(860px,96%);
+      margin:0 auto;
+      font-size:20px;
+      line-height:1.45;
+    }
+    .logo-wrap{
+      margin:18px auto 0;
+    }
+    .logo-rule{
+      width:50px;
+      height:2px;
+      margin:0 auto 16px;
+      background:var(--gold);
+    }
+    .logo-wrap img{
+      display:block;
+      width:138px;
+      height:auto;
+      margin:0 auto;
     }
 
-    main {
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      background: var(--paper);
-    }
-
-    .memorial-poster {
-      display: block;
-      width: 100%;
-      max-width: 1055px;
-      height: auto;
-      margin: 0 auto;
-      padding: 0;
-      border: 0;
-    }
-
-    @media (min-width: 1100px) {
-      body {
-        padding: 24px 0;
-      }
-
-      .memorial-poster {
-        box-shadow: 0 10px 40px rgba(0,0,0,.045);
-      }
-    }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 0;
-      }
-
-      .memorial-poster {
-        width: 100vw;
-        max-width: none;
-      }
-    }
-
-    @media print {
-      body {
-        padding: 0;
-      }
-
-      .memorial-poster {
-        width: 100%;
-        max-width: none;
-        box-shadow: none;
-      }
+    @media(max-width:650px){
+      .page{padding:18px 14px 26px}
+      .eyebrow{font-size:11px}
+      .gold-rule{margin:13px auto 17px}
+      h1{font-size:55px}
+      .dates{font-size:21px;margin-top:8px}
+      .portrait{width:min(520px,96vw);aspect-ratio:.91}
+      blockquote{font-size:29px;padding:0 30px}
+      .attribution{font-size:16px}
+      .archive{width:92%}
+      .family{font-size:16px}
+      .logo-wrap img{width:120px}
     }
   </style>
 </head>
-
 <body>
-  <main>
-    <img
-      class="memorial-poster"
-      src="assets/ervin-memorial-final-v2.png"
-      width="1055"
-      height="1491"
-      alt="In memoriam Ervin Rustemagić, 1952–2025. His magic lasted until the very end — and for a man, that is no small thing. Miljenko Jergović. Forever loved by Edina, Maja, Edvin, Alem, Lejla, Benjamin, and Timur."
-      decoding="async"
-      fetchpriority="high"
-    >
+  <main class="page">
+    <p class="eyebrow">In Memoriam</p>
+    <div class="gold-rule"></div>
+
+    <h1>Ervin Rustemagić</h1>
+    <p class="dates">1952 — 2025</p>
+
+    <figure class="portrait" aria-label="Ervin Rustemagić">
+      <img src="assets/ervin-original.jpg" alt="Ervin Rustemagić smiling, from the original family photograph">
+    </figure>
+
+    <section class="quote">
+      <blockquote>His magic lasted until the very end — and for a man, that is no small thing.</blockquote>
+      <p class="attribution">Miljenko Jergović</p>
+    </section>
+
+    <figure class="archive">
+      <img src="assets/ervin-archive.jpg" alt="Ervin Rustemagić at a comics gathering">
+    </figure>
+
+    <div class="family-rule"></div>
+    <p class="family">Forever loved by Edina, Maja, Edvin, Alem, Lejla, Benjamin, and Timur.</p>
+
+    <div class="logo-wrap">
+      <div class="logo-rule"></div>
+      <img src="assets/SAFlogo.jpg" alt="SAF — Strip Art Features">
+    </div>
   </main>
 </body>
 </html>
