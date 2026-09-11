@@ -121,7 +121,7 @@ blockquote{
   line-height:1.27;
   font-style:italic;
   font-weight:400;
-  color:#2e2a27;
+  color:rgba(46,42,39,.82);
 }
 
 .qmark{
@@ -142,6 +142,10 @@ blockquote{
 .qclose{
   margin-left:.16em;
   transform:translateY(.06em);
+}
+
+.quote-line-two{
+  white-space:nowrap;
 }
 
 .attribution{
@@ -214,6 +218,10 @@ blockquote{
     font-size:27px;
   }
 
+  .quote-line-two{
+    white-space:normal;
+  }
+
   .attribution{
     font-size:18px;
   }
@@ -255,7 +263,7 @@ blockquote{
   </figure>
 
   <section class="quote">
-    <blockquote><span class="qmark qopen">“</span>His magic lasted until the very end — and for a man, that is no small thing.<span class="qmark qclose">”</span></blockquote>
+    <blockquote><span class="qmark qopen">“</span>His magic lasted until the very end —<br><span class="quote-line-two">and for a man, that is no small thing.</span><span class="qmark qclose">”</span></blockquote>
     <p class="attribution">Miljenko Jergović</p>
   </section>
 
