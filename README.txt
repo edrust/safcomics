@@ -1,18 +1,12 @@
-ERVIN RUSTEMAGIĆ — MINIMAL ARCHIVE-HERO VERSION
+ERVIN RUSTEMAGIĆ — MINIMAL ARCHIVE-HERO VERSION V2
 
-Changes in this version:
-- The first portrait is removed completely.
-- The archival photo is the only photograph and is moved into the main image position.
-- Edge softness is much lighter and narrower.
-- Gold separators are placed:
-  1) beneath IN MEMORIAM
-  2) above the family line
-  3) above the SAF logo
-- Text sizing and spacing are rebalanced to match the minimalist preview.
-- The exact original SAF logo is used.
-- CSS is embedded directly in index.html.
+Refinements in this version:
+- Name reduced to better balance the photo.
+- Quote reduced slightly for calmer hierarchy.
+- Family line enlarged so it reads as part of the memorial, not a footer.
+- SAF logo reduced slightly.
+- Edge fade around the photo lightened.
+- Separator lines preserved in the same places.
 
-UPLOAD TO GITHUB:
-- index.html
-- assets/ervin-archive-original.jpg
-- assets/SAFlogo-original.jpg
+Upload index.html and the assets folder to your GitHub repository root.
+CSS is embedded in index.html.
