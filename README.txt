@@ -1,9 +1,10 @@
-ERVIN RUSTEMAGIĆ — MINIMAL ARCHIVE-HERO VERSION V8
+ERVIN RUSTEMAGIĆ MEMORIAL — FINAL SEO PACKAGE
 
-Final color adjustment:
-- quote and attribution now use the same softened dark charcoal
-- family line now uses the same near-black tone as the main text / "In Memoriam"
-- all spacing, line breaks, photo proportions, gold rules, and logo sizing are unchanged
+The visual design is unchanged.
 
-Upload index.html and the assets folder to the repository root.
-CSS is embedded directly in index.html.
+SEO/social description:
+"In memory of Ervin Rustemagić (1952–2025), founder of Strip Art Features and a lifelong advocate for the Ninth Art."
+
+This package also preserves the original SAF favicon setup.
+
+Upload index.html and the complete assets folder to the repository root.
